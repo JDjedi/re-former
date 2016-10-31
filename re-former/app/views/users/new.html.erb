@@ -1,0 +1,16 @@
+<h1>Welcome new user!</h1>
+<br>
+<h2>Please fill out the following information to create your account.</h2>
+<br>
+<%= form_for @user do |x| %>
+	<%= label_tag("Username:") %>
+	<%= x.text_field :username %>
+
+	<%= label_tag("Email:") %>
+	<%= x.text_field :email %>
+
+	<%= label_tag("Password:") %>
+	<%= x.password_field :password %>
+
+	<%= x.submit "Create User" %>
+<% end %>
